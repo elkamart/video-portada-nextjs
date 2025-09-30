@@ -201,8 +201,9 @@ export default function VideoHero({
     <div
       ref={containerRef}
       className={`video-container relative w-screen overflow-hidden z-[1] mt-0 bg-white ${
-        halfScreen ? 'h-[50vh]' : 'h-screen'
+        halfScreen ? 'h-[50vh]' : 'h-screen lg:h-screen h-[100dvh]'
       } ${parallaxEffect ? 'parallax' : ''}`}
+      style={halfScreen ? {} : { height: 'calc(var(--vh, 1vh) * 100)' }}
     >
       {/* Video MP4 */}
       {!vimeoMode && (

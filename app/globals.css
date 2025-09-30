@@ -58,3 +58,26 @@ body {
     scroll-behavior: auto;
   }
 }
+
+/* Animación de bounce para el scroll indicator */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
+
+/* Soporte para navegadores sin video */
+.no-video .video-container {
+  background: white;
+}
+
+.no-video .hero-content {
+  position: relative;
+  z-index: 1;
+}

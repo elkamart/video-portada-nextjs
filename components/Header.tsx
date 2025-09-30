@@ -51,9 +51,9 @@ export default function Header() {
   };
 
   return (
-    <header className={`transparent-header fixed top-0 left-0 w-full z-[1000] bg-white/70 backdrop-blur-xl border-b border-black/5 transition-shadow ${isScrolled ? 'shadow-[0_4px_25px_rgba(0,0,0,0.15)]' : ''}`}>
+    <header className={`transparent-header lg:${isScrolled ? 'fixed' : 'absolute'} fixed top-0 left-0 w-full lg:z-[1000] z-[2000] bg-white/70 backdrop-blur-xl border-b border-black/5 ${isScrolled ? 'shadow-[0_4px_25px_rgba(0,0,0,0.15)]' : ''} lg:shadow-none shadow-[0_2px_20px_rgba(0,0,0,0.1)]`}>
       {/* Header Content */}
-      <div className={`header-content ${isScrolled ? 'hidden' : 'flex items-center justify-between px-8 py-4 max-w-[1400px] mx-auto'}`}>
+      <div className={`header-content ${isScrolled ? 'hidden' : 'flex items-center justify-between lg:px-8 px-4 lg:py-4 py-2 max-w-[1400px] mx-auto gap-4'}`}>
         {/* Mobile Menu Section */}
         <div className="mobile-menu-section lg:hidden flex items-center gap-2">
           <button
